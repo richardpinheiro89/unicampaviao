@@ -14,6 +14,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import java.lang.reflect.Field;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -107,7 +108,7 @@ public class AviaoTest {
      */
     @Test
     public void testAumentarPotenciaTurbinas() {
-        System.out.println("aumentarPotenciaTurbinas");
+        System.out.println("aumentarPotenciaTurbinas1");
         Aviao instance = new Aviao();
         instance.aumentarPotenciaTurbinas();
         int expResult = 0;
@@ -212,8 +213,7 @@ public class AviaoTest {
         Aviao instance = new Aviao();
         instance.abastecer(value);
         assertEquals(value, instance.getQntdAtualCombustivel(), 0.0);
-        
-        double value2 = 10000.0;
+        double value2 = 10000.0; // codigo baixado do GiT
         instance.abastecer(value2);
         assertEquals(instance.getCapacidadeTotalCombustivel(), instance.getQntdAtualCombustivel(), 0.0);
     }
@@ -254,7 +254,7 @@ public class AviaoTest {
      * Test of getQntdAtualCombustivel method, of class Aviao.
      */
     @Test
-    public void testGetQntdAtualCombustivel() {
+    public void getQntdAtualCombustivel() {
         System.out.println("getQntdAtualCombustivel");
         Aviao instance = new Aviao();
         double expResult = 0.0;
@@ -324,4 +324,5 @@ public class AviaoTest {
         
     }
     
+   
 }
